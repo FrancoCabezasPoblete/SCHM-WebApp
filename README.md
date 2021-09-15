@@ -27,3 +27,13 @@ El proyecto de ejemplo se baso en la documentación disponible en:
 * [.Net Core + Docker](https://code.visualstudio.com/docs/containers/quickstart-aspnet-core)
 
 Desarrollado con [Docker](https://www.docker.com/) y complementos de [Visual Studio Code](https://code.visualstudio.com/)
+
+**Importante:** Requiere tener [Docker](https://www.docker.com/) instalado. Para levantar el proyecto ejecutar los siguientes pasos:
+1. ```docker-compose -f docker-compose.yml build --no-cache```
+2. ```docker-compose -f docker-compose.yml up -d```
+3. Acceder a http://localhost:5000/
+
+Puede validar la creación de la imagen y contenedor:
+
+1. ```docker images```
+2. ```docker ps -a```
