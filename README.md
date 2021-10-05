@@ -13,8 +13,8 @@ Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.labcomp.cl
 
 ## Videos
 
-* [Video presentación cliente](https://youtu.be/oS3KH8nr_Ec)
-* [Video presentación avance 1](https://youtu.be/oS3KH8nr_Ec)
+* [Video presentación cliente](https://youtu.be/xEYDTg0q1Ao)
+* [Video presentación avance 1](https://www.youtube.com/)
 * Video presentación final (*Pendiente*)
 
 ## Aspectos técnicos relevantes
