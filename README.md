@@ -1,20 +1,20 @@
-# Grupo x
+# Grupo 11
 
-Este es el repositorio del *Grupo X*, cuyos integrantes son:
+Este es el repositorio del *Grupo 11*, cuyos integrantes son:
 
-* Integrante 1 - Rol
-* Integrante 2 - Rol
-* Integrante 3 - Rol
-* **Tutor**: Nombre Tutor
+* Franco Cabezas - 201973082-7
+* Ángelo Miranda - 201973126-2
+* Paulina Vega - 201973052-5
+* **Tutor**: Ibet Lara
 
 ## Wiki
 
-Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.labcomp.cl/wladimir.ormazabal.ex/pruebas-asignatura/-/wikis/inicio)
+Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.labcomp.cl/wladimir.ormazabal.ex/inf236-2021-2-grupo-11-p-002/-/wikis/Inicio)
 
 ## Videos
 
 * [Video presentación cliente](https://youtu.be/xEYDTg0q1Ao)
-* [Video presentación avance 1](https://www.youtube.com/)
+* [Video presentación avance 1](https://drive.google.com/file/d/1TgpT9KZK0LEM13Am4jzxLIDdpv983Rkg/view?usp=sharing)
 * Video presentación final (*Pendiente*)
 
 ## Aspectos técnicos relevantes
