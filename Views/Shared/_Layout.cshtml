@@ -6,23 +6,32 @@
     <title>@ViewData["Title"] - Web</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Web</a>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-white border-bottom box-shadow mb-3 justify-content-between">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sociedad Chilena de Musicología</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class='nav-link @(ViewBag.Current == "Login" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Login">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class='nav-link @(ViewBag.Current == "Solicitudes" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Solicitudes">Solicitudes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class='nav-link @(ViewBag.Current == "Buscador" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Buscador">Buscador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class='nav-link @(ViewBag.Current == "Solicitud" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Solicitud">Solicitud</a>
                         </li>
                     </ul>
                 </div>
@@ -35,11 +44,22 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer text-muted pt-3">
+        <div class="container-fluid">
+            <div class = "row justify-content-between">
+                <div class="col-3 ml-3 d-flex align-items-start flex-column text-justify">
+                    <h3>Nuestra institución</h3>
+                    La Sociedad Chilena de Musicología (SChM) es una corporación de derecho privado sin fines de lucro constituida el 14 de junio de 2001, 
+                    que convoca y agrupa a académicos e investigadores dedicados al estudio de la música en sus diversas manifestaciones... [leer más]
+                </div>
+                <div class="col-3 mr-3 d-flex align-items-end flex-column">
+                    <h3>Contáctanos</h3>
+                    Correo: Musicologia123@gmail.com <br> Teléfono: +569 12345678
+                </div>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
