@@ -1,3 +1,237 @@
-body{
-    background-color: #ffaa00;
+/* Globals */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.btn {
+    border-radius: 8px;
+}
+
+.dropdown-menu {
+    min-width: auto !important;
+}
+
+.bottom{
+    background-color: #ffff;
+}
+
+h2 {
+    color: #ffff;
+}
+
+.planner{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.btn-1 {
+    background-color: #FD7CA6;
+    color: #F6F9FC;
+}
+
+.btn-1:hover {
+    background-color: #e20059;
+    color: #F6F9FC;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+.scroll-text-sm {
+    position: relative;
+    margin-top: .5rem;
+    overflow: auto;
+}    
+
+.scroll-text {
+    position: relative;
+    height: 125px;
+    overflow: auto;
+} 
+
+.top{
+    background-color: #ffaa00;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+.input-group {
+    margin-top: 20px;
+}
+
+#row1 {
+    margin-left: 40%;   
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Filter
+----------------*/
+
+.buttonGray {
+    background-color: #e9ecef;
+    border: 2px solid #e9ecef;
+    color: #6a6a6a;
+}
+
+.buttonGray:hover {
+    background-color: #dee0e2 !important;
+    color: #6a6a6a !important;
+    border: 2px solid #dee0e2 !important;
+}
+
+.buttonGray:active {
+    background-color: #c6c6c6 !important;
+    border: 2px solid #c6c6c6 !important;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem #f6f8f9;
+}
+
+.buttonGray:focus {
+    background-color: #c6c6c6 !important;
+    color: white;
+    border: 2px solid #c6c6c6 !important;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem #f6f8f9 !important;
+}
+
+.buttonGray.btn-outline-secondary:not(:disabled):not(.disabled).active, .btn-outline-secondary:not(:disabled):not(.disabled):active, .show > .btn-outline-secondary.dropdown-toggle {
+    color: white;
+    background-color: #c6c6c6 !important;
+    border-color: #f6f8f9 !important;
+}
+
+/* Pagination
+----------------*/
+
+.page-item.active .page-link {
+    background-color: #c6c6c6;
+    border-color: #c6c6c6;
+}
+
+.page-link {
+    margin-left: 0.5rem;
+    background-color: #e9ecef;
+    color: #6a6a6a;
+    border-radius: 8px !important;
+    border: white;
+}
+
+.page-link:hover {
+    color: #6a6a6a;
+    text-decoration: none;
+    background-color: #dee0e2;
+    border-color: #dee2e6;
+}
+
+.buttonSearch:focus, .page-link:focus {
+    z-index: 2;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem #f6f8f9;
+}
+
+/* Check button 
+------------------------*/
+.btn-check {
+    background-color: #a5c26e;
+    color: white;
+    border: #a5c26e;
+}
+
+.btn-check:hover {
+    color: #fff;
+    background-color: #8fb361;
+    border-color: #8fb361;
+}
+
+.btn-check:focus {
+    color: #fff;
+    background-color: #6db361;
+    border-color: #6db361;
+    outline: 0;
+    box-shadow: none;
+}
+
+/* Cross button 
+------------------------*/
+.btn-2.cross {
+    background-color: #FFB635;
+    color: #F6F9FC;
+    border: #FFB635;
+}
+
+.btn-2:hover.cross {
+    background-color: #F8974E;
+    color: #F6F9FC;
+    border: #FFB635;
+}
+
+.btn-secondary:hover.cross{
+    color: #fff;
+    background-color: #F8974E;
+    border-color: #d68343;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active.cross, .btn-secondary:not(:disabled):not(.disabled):active.cross, .show > .btn-secondary.dropdown-toggle.cross {
+    color: #fff;
+    background-color: #FFB635;
+}
+
+/* Update button 
+------------------------*/
+
+.btn-update {
+    background-color: #6fb6d7;
+    color: white;
+    border: #6fb6d7;
+}
+
+.btn-update:hover {
+    color: #fff;
+    background-color: #6fa0d7;
+    border-color: #6fa0d7;
+}
+
+.btn-update:focus {
+    color: #fff;
+    background-color: #6f8fd7;
+    border-color: #6f8fd7;
+    outline: 0;
+    box-shadow: none;
+}
+
+/* Dot button 
+------------------------*/
+.btn-2.dot {
+    background-color: #FFB635;
+    color: #F6F9FC;
+    border: #FFB635;
+}
+
+.btn-2:hover.dot {
+    background-color: #F8974E;
+    color: #F6F9FC;
+    border: #FFB635;
+}
+
+.btn-secondary:hover.dot{
+    color: #fff;
+    background-color: #F8974E;
+    border-color: #d68343;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active.dot, .btn-secondary:not(:disabled):not(.disabled):active.dot, .show > .btn-secondary.dropdown-toggle.dot {
+    color: #fff;
+    background-color: #FFB635;
+}
+
+

@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-white border-bottom box-shadow mb-3 justify-content-between">
+        <nav class="navbar navbar-top navbar-expand-sm navbar-toggleable-sm bg-white border-bottom box-shadow justify-content-between">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sociedad Chilena de Musicología</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -38,7 +39,7 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container-fluid padding-top margin-foot">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -47,14 +48,14 @@
     <footer class="footer text-muted pt-3">
         <div class="container-fluid">
             <div class = "row justify-content-between">
-                <div class="col-3 ml-3 d-flex align-items-start flex-column text-justify">
+                <div class="col-5 ml-3 d-flex align-items-start flex-column text-justify">
                     <h3>Nuestra institución</h3>
                     La Sociedad Chilena de Musicología (SChM) es una corporación de derecho privado sin fines de lucro constituida el 14 de junio de 2001, 
-                    que convoca y agrupa a académicos e investigadores dedicados al estudio de la música en sus diversas manifestaciones... [leer más]
+                    que convoca y agrupa a académicos e investigadores dedicados al estudio de la música en sus diversas manifestaciones...<a asp-controller="Home" asp-action="Index">[leer más]</a> 
                 </div>
-                <div class="col-3 mr-3 d-flex align-items-end flex-column">
+                <div class="col-3 mr-3 d-flex align-items-end flex-column text-right">
                     <h3>Contáctanos</h3>
-                    Correo: Musicologia123@gmail.com <br> Teléfono: +569 12345678
+                    Correo: Musicologia123@gmail.com <br> Teléfono: +56 9 12345678
                 </div>
             </div>
         </div>

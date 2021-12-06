@@ -14,8 +14,8 @@ body{
     padding: 50px;
     margin: auto;
     margin-top: 100px;
-    margin-bottom: 200px !important;
-    border-radius: 8px;
+    margin-bottom: 200px;
+    border-radius: 16px;
     font-family: "calibri";
 }
 
@@ -27,14 +27,29 @@ body{
 
 .controls {
     width: 100%;
-    background: #A0A0A0;
+    background: #e4e4e4;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 10px;
     margin-bottom: 16px;
-    border: 1px solid #808080;
+    border: 2px solid white !important ;
     font-family: "calibri";
     font-size: 18px;
 }
+
+.controls:focus {
+    border: 1px solid #ffbebe !important;
+    outline: none;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    border: 1px solid #ffbebe !important;
+    box-shadow: 0 0 0 0.2rem #ffe8e8 !important;
+}
+
 .form-register h4 {
     color: #e20059;
 }
@@ -47,18 +62,38 @@ body{
 }
 
 .form-register a {
-    color: #000000;
+    color: #bdbdbd;
+    font-style: italic;
     text-decoration: none;
     text-align: center;
+    margin-top: 50rem;
+}
+
+.form-register a:hover {
+    color: #9c9c9c;
 }
 
 .form-register .btn-warning {
     background: #e20059;
-    border-radius: 12px;
     padding: 10px;
-    color: #ffffff;
-    border-color: #ffffff;
     font-size: 16px;
+    color: white !important;
+    border-radius: 12px;
+    border: 3px solid white;
+    margin-bottom: 1rem;
+}
+
+.btn-warning:hover {
+    background-color: #ff4a4a;
+}
+
+.btn-warning:active:hover {
+    background-color: #b4006e !important;
+}
+
+.btn-warning:focus {
+    border: 3px solid #ffe8e8 !important;
+    box-shadow: 0 0 0 0.2rem #ffe8e8 !important;
 }
 
 .form-register .form-control {

@@ -1,0 +1,12 @@
+.titleLayer {
+    font-family: "Karla";
+    text-transform: uppercase;
+    color: #ffff; 
+}  
+
+.fondo{
+    background-image: url("../piano.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

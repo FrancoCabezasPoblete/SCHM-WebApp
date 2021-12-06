@@ -2,14 +2,142 @@
     ViewData["Title"] = "Buscador";
 }
 
-<link rel="stylesheet" href="~/js/site.js">
-<link rel="stylesheet" href="~/css/request.css">
+<link rel="stylesheet" href="~/css/planner.css">
 
-<title>Buscador</title>
+<div class="row top">
+    <div class="col text-center">
+        <h2>Buscador</h2>
+    </div>
+</div>
 
-<div class="busqueda">
-    <input type="text" class="buscador" placeholder="¿Que buscas?">
-    <a href="" class="boton">
-    <i class="search.png"></i>
-    </a>
+
+
+<div class="container-fluid mt-3">
+
+    <div class="row bottom d-flex flex-row">
+        <form class="form-inline mx-auto d-flex">
+            <input class="form-control my-2 my-sm-0 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0 mr-sm-2 buttonGray" type="submit"><i class="fas fa-search"></i></button>
+            <div class="dropdown my-2 my-sm-0">
+                <button class="btn btn-outline-secondary dropdown-toggle buttonGray" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-filter"></i> Filtro
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-7">
+            <h3>TITULOS DE PAGINA</h3>
+        
+            <div class="row mb-2">
+                <div class="col">
+                    <div class="card text-left">
+                        <div class="card-header">
+                            Historiografía musical chilena, una aproximación <span class="text-muted">| Documento </span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Presentación</h5>
+                            <p class="card-text scroll-text">El presente escrito se deriva de un reciente proyecto de investigación en torno a la historiografía de la música chilena.[1] Nos habíamos propuesto caracterizar y comprender el relato historiográfico sobre música de todo tipo en Chile, a través del análisis de libros publicados,[2] por lo que, durante dos años, nos abocamos a la ubicación de ese material, a su evaluación y a la elaboración de criterios que permitieron la constitución final del universo de estudio.[3] El solo acto de comunicar tales contenidos de manera pública, estimábamos, podría revelar implícitamente al menos tres cuestiones fundamentales: una conceptualización de lo musical (que discrimina y distingue), cierta teoría cultural (que fundamenta la operación previa) y algún concepto de sociedad (a la que pretende contribuir). El acto de enunciación podría, además, remitir a otros dos aspectos, como son la ideología del autor y el contexto de producción que habría condicionado su aporte. En su conjunto esta producción configuraría un ejercicio </p>
+                            <div class="row">
+                                <a href="http://resonancias.uc.cl/es/N%C2%BA-38/historiografia-musical-chilena-una-aproximacion-2.html" class="btn btn-primary my-2 my-sm-0 mr-sm-2">Enlace <i class="fas fa-link"></i></a>
+                                <a href="#" class="btn btn-danger my-2 my-sm-0 mr-sm-2">Descargar pdf <i class="fas fa-file-pdf"></i></a>
+                                <a href="#" class="btn btn-success my-2 my-sm-0 mr-sm-2">Agregar a expediente <i class="fas fa-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Por Víctor Rondón
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <div class="card text-left">
+                        <div class="card-header">
+                            Stock, Freddy. Corazones Rojos. Biografía no autorizada de "Los Prisioneros" <span class="text-muted">| Comentarios </span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Presentación</h5>
+                            <p class="card-text scroll-text"> - </p>
+                            <div class="row">
+                                <a href="http://resonancias.uc.cl/es/N-5/stock-freddy-corazones-rojos-biografia-no-autorizada-de-los-prisioneros.html" class="btn btn-primary my-2 my-sm-0 mr-sm-2">Enlace <i class="fas fa-link"></i></a>
+                                <a href="#" class="btn btn-danger my-2 my-sm-0 mr-sm-2">Descargar pdf <i class="fas fa-file-pdf"></i></a>
+                                <a href="#" class="btn btn-success my-2 my-sm-0 mr-sm-2">Agregar a expediente <i class="fas fa-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Por Fabio Salas
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-5"><h3 class="text-right">EXPEDIENTES</h3>
+            <div class="row mb-2">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Enlace <i class="fas fa-link"></i></a>
+                            <a href="#" class="card-link">Eliminar <i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Enlace <i class="fas fa-link"></i></a>
+                            <a href="#" class="card-link">Eliminar <i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Enlace <i class="fas fa-link"></i></a>
+                            <a href="#" class="card-link">Eliminar <i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Enlace <i class="fas fa-link"></i></a>
+                            <a href="#" class="card-link">Eliminar <i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Enlace <i class="fas fa-link"></i></a>
+                            <a href="#" class="card-link">Eliminar <i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
