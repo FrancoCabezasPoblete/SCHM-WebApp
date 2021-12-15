@@ -41,3 +41,46 @@
 /home/orig3n/Escritorio/inf236-2021-2-grupo-11-p-002/obj/Debug/net5.0/Web.genruntimeconfig.cache
 /home/orig3n/Escritorio/inf236-2021-2-grupo-11-p-002/obj/Debug/net5.0/Web.csproj.CopyComplete
 /home/orig3n/Escritorio/inf236-2021-2-grupo-11-p-002/obj/Debug/net5.0/Razor/Views/Home/Solicitudes.cshtml.g.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\bin\Debug\net5.0\appsettings.Development.json
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\bin\Debug\net5.0\appsettings.json
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\bin\Debug\net5.0\Web.exe
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\bin\Debug\net5.0\Web.deps.json
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\bin\Debug\net5.0\Web.runtimeconfig.json
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\bin\Debug\net5.0\Web.runtimeconfig.dev.json
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\bin\Debug\net5.0\Web.dll
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\bin\Debug\net5.0\ref\Web.dll
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\bin\Debug\net5.0\Web.pdb
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\bin\Debug\net5.0\Web.Views.dll
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\bin\Debug\net5.0\Web.Views.pdb
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.csproj.AssemblyReference.cache
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.GeneratedMSBuildEditorConfig.editorconfig
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.AssemblyInfoInputs.cache
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.AssemblyInfo.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.csproj.CoreCompileInputs.cache
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.MvcApplicationPartsAssemblyInfo.cache
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.RazorAssemblyInfo.cache
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.RazorAssemblyInfo.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\staticwebassets\Web.StaticWebAssets.Manifest.cache
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\staticwebassets\Web.StaticWebAssets.xml
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\scopedcss\bundle\Web.styles.css
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.TagHelpers.input.cache
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.TagHelpers.output.cache
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.RazorCoreGenerate.cache
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Razor\Views\Home\Buscador.cshtml.g.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Razor\Views\Home\Solicitud.cshtml.g.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Razor\Views\Home\Solicitudes.cshtml.g.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.RazorTargetAssemblyInfo.cache
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.RazorTargetAssemblyInfo.cs
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.Views.pdb
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.dll
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\ref\Web.dll
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.pdb
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.genruntimeconfig.cache
+D:\pvveg\Documents\College\3er Año\2do Semestre\INF236 (Diseño)\Lineamiento 5\inf236-2021-2-grupo-11-p-002\obj\Debug\net5.0\Web.csproj.CopyComplete

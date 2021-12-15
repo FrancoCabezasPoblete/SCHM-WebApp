@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/orig3n/Escritorio/inf236-2021-2-grupo-11-p-002/Web.csproj": {}
+    "D:\\pvveg\\Documents\\College\\3er Año\\2do Semestre\\INF236 (Diseño)\\Lineamiento 5\\inf236-2021-2-grupo-11-p-002\\Web.csproj": {}
   },
   "projects": {
-    "/home/orig3n/Escritorio/inf236-2021-2-grupo-11-p-002/Web.csproj": {
+    "D:\\pvveg\\Documents\\College\\3er Año\\2do Semestre\\INF236 (Diseño)\\Lineamiento 5\\inf236-2021-2-grupo-11-p-002\\Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/orig3n/Escritorio/inf236-2021-2-grupo-11-p-002/Web.csproj",
+        "projectUniqueName": "D:\\pvveg\\Documents\\College\\3er Año\\2do Semestre\\INF236 (Diseño)\\Lineamiento 5\\inf236-2021-2-grupo-11-p-002\\Web.csproj",
         "projectName": "Web",
-        "projectPath": "/home/orig3n/Escritorio/inf236-2021-2-grupo-11-p-002/Web.csproj",
-        "packagesPath": "/home/orig3n/.nuget/packages/",
-        "outputPath": "/home/orig3n/Escritorio/inf236-2021-2-grupo-11-p-002/obj/",
+        "projectPath": "D:\\pvveg\\Documents\\College\\3er Año\\2do Semestre\\INF236 (Diseño)\\Lineamiento 5\\inf236-2021-2-grupo-11-p-002\\Web.csproj",
+        "packagesPath": "C:\\Users\\pvveg\\.nuget\\packages\\",
+        "outputPath": "D:\\pvveg\\Documents\\College\\3er Año\\2do Semestre\\INF236 (Diseño)\\Lineamiento 5\\inf236-2021-2-grupo-11-p-002\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/orig3n/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\pvveg\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

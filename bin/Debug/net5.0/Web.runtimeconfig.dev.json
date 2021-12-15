@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/home/orig3n/.dotnet/store/|arch|/|tfm|",
-      "/home/orig3n/.nuget/packages"
+      "C:\\Users\\pvveg\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\pvveg\\.nuget\\packages"
     ]
   }
 }

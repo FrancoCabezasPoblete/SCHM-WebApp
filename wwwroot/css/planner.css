@@ -6,7 +6,7 @@
 }
 
 .btn {
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 .dropdown-menu {
@@ -15,6 +15,12 @@
 
 .bottom{
     background-color: #ffff;
+}
+
+.flex-1 {
+    flex: 1;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 h2 {
@@ -141,19 +147,19 @@ h2 {
 
 /* Check button 
 ------------------------*/
-.btn-check {
+.btn-green {
     background-color: #a5c26e;
     color: white;
     border: #a5c26e;
 }
 
-.btn-check:hover {
+.btn-green:hover {
     color: #fff;
     background-color: #8fb361;
     border-color: #8fb361;
 }
 
-.btn-check:focus {
+.btn-green:focus {
     color: #fff;
     background-color: #6db361;
     border-color: #6db361;
@@ -189,19 +195,19 @@ h2 {
 /* Update button 
 ------------------------*/
 
-.btn-update {
+.btn-blue {
     background-color: #6fb6d7;
     color: white;
     border: #6fb6d7;
 }
 
-.btn-update:hover {
+.btn-blue:hover {
     color: #fff;
     background-color: #6fa0d7;
     border-color: #6fa0d7;
 }
 
-.btn-update:focus {
+.btn-blue:focus {
     color: #fff;
     background-color: #6f8fd7;
     border-color: #6f8fd7;
