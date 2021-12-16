@@ -20,6 +20,8 @@ namespace Web{
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services){
             services.AddControllersWithViews();
+            string conString = ConfigurationExtensions.GetConnectionString(Configuration,"DefaultConnection");
+            services.AddSingleton<string>(conString);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
