@@ -1,11 +1,8 @@
-body{
-    background-color: #ffaa00;
-}
+/* Background 
+------------------------*/
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    background-color: #ffaa00;
 }
 
 .form-register {
@@ -15,7 +12,7 @@ body{
     margin: auto;
     margin-top: 100px;
     margin-bottom: 200px;
-    border-radius: 16px;
+    border-radius: 10px;
     font-family: "calibri";
 }
 
@@ -29,7 +26,7 @@ body{
     width: 100%;
     background: #e4e4e4;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 7px;
     margin-bottom: 16px;
     border: 2px solid white !important ;
     font-family: "calibri";
@@ -39,10 +36,6 @@ body{
 .controls:focus {
     border: 1px solid #ffbebe !important;
     outline: none;
-}
-
-.form-control {
-    border-radius: 10px;
 }
 
 .form-control:focus {
@@ -81,19 +74,6 @@ body{
     border-radius: 12px;
     border: 3px solid white;
     margin-bottom: 1rem;
-}
-
-.btn-warning:hover {
-    background-color: #ff4a4a;
-}
-
-.btn-warning:active:hover {
-    background-color: #b4006e !important;
-}
-
-.btn-warning:focus {
-    border: 3px solid #ffe8e8 !important;
-    box-shadow: 0 0 0 0.2rem #ffe8e8 !important;
 }
 
 .form-register .form-control {

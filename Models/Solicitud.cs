@@ -6,6 +6,7 @@ using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
 
 
+
 namespace Web.Models{
     [Table("Solicitud")]
     public class SolicitudModel{
@@ -29,31 +30,28 @@ namespace Web.Models{
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Correo { get; set; }
-        public DateTime Fecha { get; set; }
         public string Solicitud { get; set; }
+        public string Fecha { get; set; } = DateTime.Now.ToString("yyyy-MM-dd");
+        
         public byte Estado { get; set; } = 0;
 
         //DateTime myDateTime = DateTime.Now;
         //string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff");
 
-        public List<SolicitudModel> GetAll()
-        {
+        public List<SolicitudModel> GetAll(){
             IEnumerable<SolicitudModel> solicitudes;
 
-            using (IDbConnection db = new SqlConnection(_dbConnection))
-            {
+            using (IDbConnection db = new SqlConnection(_dbConnection)){
                 solicitudes = db.GetAll<SolicitudModel>();
             }
 
             return solicitudes.ToList();
         }
-
-        public void GetById(int id)
-        {
+        
+        public void GetById(int id){
             SolicitudModel solicitud = new SolicitudModel();
 
-            using (IDbConnection db = new SqlConnection(_dbConnection))
-            {
+            using (IDbConnection db = new SqlConnection(_dbConnection)){
                 solicitud = db.Get<SolicitudModel>(id);
             }
 

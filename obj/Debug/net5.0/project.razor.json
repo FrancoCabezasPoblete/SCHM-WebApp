@@ -15634,6 +15634,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/orig3n/Escritorio/inf236-2021-2-grupo-11-p-002/Views/Home/LeerMas.cshtml",
+      "TargetPath": "Views\\Home\\LeerMas.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/orig3n/Escritorio/inf236-2021-2-grupo-11-p-002/Views/Home/Login.cshtml",
       "TargetPath": "Views\\Home\\Login.cshtml",
       "FileKind": "mvc"
