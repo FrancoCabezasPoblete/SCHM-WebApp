@@ -1,107 +1,137 @@
 @{
     ViewData["Title"] = "Buscador";
 }
-
-
-<!--{block}-->
-
+@model ExpedienteModelForm
 
 <link rel="stylesheet" href="~/css/planner.css">
 <link rel="stylesheet" href="~/css/globals.css">
 
-<div class="row top">
-    <div class="col text-center">
-        <h2>Buscador</h2>
+
+<div class="row top" style="background-image: url(../notas.jpeg)">
+    <div class="col text-center mt-5">
+        <h1>Buscador</h1>
     </div>
 </div>
-
-
 
 <div class="container-fluid mt-3">
 
     <div class="row">
         <div class="col-7">
-            <div class="row mt-2">
-        <form class="form-inline mx-auto d-flex flex-1">
-            <script async src="https://cse.google.com/cse.js?cx=a0d850a3a11691953"></script>
+            <script async src="https://cse.google.com/cse.js?cx=afebc0d95431e0169"></script>
             <div class="gcse-search"></div>
-        </form>
-    </div>
         </div>
 
 
+        <div class="col-5">
+            <div class="row flex-row d-flex">        
+                <nav class="navbar px-0 justify-content-start" style="min-width: 100%"> 
+                    <h3 class="text-right mt-1 mx-1">Expedientes</h3>  
+                </nav>
+            </div>
+            <div class="row flex-row d-flex justify-content-start mb-1 px-1">
+                <form class="form-inline flex-1 p-0" asp-controller="Home" asp-action="Buscador" method="get" style="min-width:1px">
+                    <input class="form-control mr-1 flex-1" name="busqueda" name="busqueda" type="search" placeholder="Search" aria-label="Search" value="@ViewBag.busqueda" style="min-width:1px">
+                    <button class="btn btn-grey mr-1" type="submit"><i class="fas fa-search"></i></button>
+                    <button type="button" class="btn btn-grey" data-toggle="modal" data-target="#modalExpediente"><i class="fas fa-plus"></i></button>
+                </form>
+            </div>
 
-        <div class="col-5"><h3 class="text-right mb-3">Expedientes</h3>
-
-
-
-
-            <div class="row mb-2">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title limit">¿Está Jorge Gonzalez bien?</h5>
-                            <h6 class="card-subtitle mb-2 text-muted limit">Por Paulina Vega</h6>
-                            <p class="card-text limit-2">Desde que Jorge Gonzalez y la Fliquiteada salen juntos, Jorge ha hecho una cantidad alarmante de distintos posts en instagram.</p>
-                            <a href="#" class="card-link"><i class="fa fa-download"></i></a>
-                            <a href="#" class="card-link"><i class="fas fa-link"></i></a>
-                            <a href="#" class="card-link"><i class="fas fa-trash-alt"></i></a>
-                        </div>
+            <!-- Modal -->
+            <div class="modal fade" id="modalExpediente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Agregar expediente</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title limit">Sabrina porfavor borra la funa te juro que fue un error</h5>
-                            <h6 class="card-subtitle mb-2 text-muted limit">Por Gus Johnson</h6>
-                            <p class="card-text limit-2">Te juro que te amo fue un error por ser joven y estúpido nunca quise dejarte sola en un momento tan difícil para ir a abrir cartas de pókemon en un stream de Twitch.</p>
-                            <a href="#" class="card-link"><i class="fa fa-download"></i></a>
-                            <a href="#" class="card-link"><i class="fas fa-link"></i></a>
-                            <a href="#" class="card-link"><i class="fas fa-trash-alt"></i></a>
-                        </div>
+                        <form enctype="multipart/form-data" asp-controller="Home" asp-action="InsertarExpediente" method="post">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <input class="form-control form-control-lg my-2" asp-for="Titulo" type="text" placeholder="Título" required>
+                                    <div class="input-group my-2">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPrepend2">Por</span>
+                                        </div>
+                                        <input type="text" asp-for="Autor" class="form-control" id="validationDefaultUsername" placeholder="Autor" aria-describedby="inputGroupPrepend2" required>
+                                    </div>
+                                    <input class="form-control my-2" asp-for="Descripcion" type="text" placeholder="Descripción">
+                                    <input class="form-control form-control-sm my-2" asp-for="Fuente" type="Link" placeholder="Enlace" required>
+                                    <small id="fileHelp" class="form-text text-muted mt-4">Solo archivos pdf</small>
+                                    <input type="file" asp-for="ArchivoForm" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-red">Save changes</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="row mb-2">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title limit">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
-                            <h6 class="card-subtitle mb-2 text-muted limit">Por Dummy</h6>
-                            <p class="card-text limit-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt finibus ultrices. Curabitur imperdiet nunc iaculis justo tincidunt rhoncus. Aenean id faucibus purus, et finibus augue. Phasellus suscipit neque vitae elit tempor, bibendum dignissim elit condimentum. In iaculis velit in lacus maximus, a aliquet nisl viverra. In quis scelerisque elit, non commodo ante. Nam vestibulum faucibus ex, eget luctus lorem blandit ac. Phasellus at tincidunt eros. Cras placerat erat a placerat vehicula. Vivamus varius eu elit nec blandit. Morbi pretium ante quis nulla molestie suscipit. Cras feugiat a purus sit amet luctus. In blandit at dui in rhoncus. Nunc velit ligula, consequat eu purus quis, gravida mattis felis. Nunc mattis justo ac sagittis tempor.</p>
-                            <a href="#" class="card-link"><i class="fa fa-download"></i></a>
-                            <a href="#" class="card-link"><i class="fas fa-link"></i></a>
-                            <a href="#" class="card-link"><i class="fas fa-trash-alt"></i></a>
+
+            @for(var i = 0; i < ViewBag.cantidad; i+=2){
+                @if(i+1 >= ViewBag.cantidad){
+                    <div class="row d-row">
+                        <div class="col-12 p-1">
+                            <div class="card mb-1">
+                                <div class="card-body">
+                                    <h5 class="card-title limit responsive-font">@ViewBag.elementosPagina[i].Titulo</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted limit responsive-font">Por @ViewBag.elementosPagina[i].Autor</h6>
+                                    <p class="card-text limit-2 scroll-text responsive-font">@ViewBag.elementosPagina[i].Descripcion</p>
+                                    @if(@ViewBag.elementosPagina[i].Archivo != null){
+                                    <a asp-controller="Home" asp-action="DescargarExpediente" asp-route-id="@ViewBag.elementosPagina[i].IDExpediente" class="card-link"><i class="fa fa-download"></i></a>
+                                    }
+                                    <a href="@ViewBag.elementosPagina[i].Fuente" class="card-link"><i class="fas fa-link"></i></a>
+                                    <a href='@Url.Action("EliminarExpediente","Home",new {id = @ViewBag.elementosPagina[i].IDExpediente})' class="card-link"><i class="fas fa-trash-alt"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title limit">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
-                            <h6 class="card-subtitle mb-2 text-muted limit">Por Dummy</h6>
-                            <p class="card-text limit-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt finibus ultrices. Curabitur imperdiet nunc iaculis justo tincidunt rhoncus. Aenean id faucibus purus, et finibus augue. Phasellus suscipit neque vitae elit tempor, bibendum dignissim elit condimentum. In iaculis velit in lacus maximus, a aliquet nisl viverra. In quis scelerisque elit, non commodo ante. Nam vestibulum faucibus ex, eget luctus lorem blandit ac. Phasellus at tincidunt eros. Cras placerat erat a placerat vehicula. Vivamus varius eu elit nec blandit. Morbi pretium ante quis nulla molestie suscipit. Cras feugiat a purus sit amet luctus. In blandit at dui in rhoncus. Nunc velit ligula, consequat eu purus quis, gravida mattis felis. Nunc mattis justo ac sagittis tempor.</p>
-                            <a href="#" class="card-link"><i class="fa fa-download"></i></a>
-                            <a href="#" class="card-link"><i class="fas fa-link"></i></a>
-                            <a href="#" class="card-link"><i class="fas fa-trash-alt"></i></a>
+                } else {
+                    <div class="row d-row">
+                        <div class="col-lg-6 p-1">
+                            <div class="card mb-1">
+                                <div class="card-body">
+                                    <h5 class="card-title limit responsive-font">@ViewBag.elementosPagina[i].Titulo</h5>
+                                    <h6 class="card-subtitle mb-2 responsive-font text-muted limit">Por @ViewBag.elementosPagina[i].Autor</h6>
+                                    <p class="card-text limit-2 responsive-font scroll-text">@ViewBag.elementosPagina[i].Descripcion</p>
+                                    @if(@ViewBag.elementosPagina[i].Archivo != null){
+                                    <a asp-controller="Home" asp-action="DescargarExpediente" asp-route-id="@ViewBag.elementosPagina[i].IDExpediente" class="card-link"><i class="fa fa-download"></i></a>
+                                    }
+                                    <a href="@ViewBag.elementosPagina[i].Fuente" class="card-link"><i class="fas fa-link"></i></a>
+                                    <a href='@Url.Action("EliminarExpediente","Home",new {id = @ViewBag.elementosPagina[i].IDExpediente})' class="card-link"><i class="fas fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 p-1">
+                            <div class="card mb-1">
+                                <div class="card-body">
+                                    <h5 class="card-title limit responsive-font">@ViewBag.elementosPagina[i+1].Titulo</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted limit responsive-font">Por @ViewBag.elementosPagina[i+1].Autor</h6>
+                                    <p class="card-text limit-2 scroll-text responsive-font">@ViewBag.elementosPagina[i+1].Descripcion</p>
+                                    @if(@ViewBag.elementosPagina[i+1].Archivo != null){
+                                    <a asp-controller="Home" asp-action="DescargarExpediente" asp-route-id="@ViewBag.elementosPagina[i+1].IDExpediente" class="card-link"><i class="fa fa-download"></i></a>
+                                    }
+                                    <a href="@ViewBag.elementosPagina[i+1].Fuente" class="card-link"><i class="fas fa-link"></i></a>
+                                    <a href='@Url.Action("EliminarExpediente","Home",new {id = @ViewBag.elementosPagina[i+1].IDExpediente})' class="card-link"><i class="fas fa-trash-alt"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row mb-2">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title limit">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
-                            <h6 class="card-subtitle mb-2 text-muted limit">Por Dummy</h6>
-                            <p class="card-text limit-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt finibus ultrices. Curabitur imperdiet nunc iaculis justo tincidunt rhoncus. Aenean id faucibus purus, et finibus augue. Phasellus suscipit neque vitae elit tempor, bibendum dignissim elit condimentum. In iaculis velit in lacus maximus, a aliquet nisl viverra. In quis scelerisque elit, non commodo ante. Nam vestibulum faucibus ex, eget luctus lorem blandit ac. Phasellus at tincidunt eros. Cras placerat erat a placerat vehicula. Vivamus varius eu elit nec blandit. Morbi pretium ante quis nulla molestie suscipit. Cras feugiat a purus sit amet luctus. In blandit at dui in rhoncus. Nunc velit ligula, consequat eu purus quis, gravida mattis felis. Nunc mattis justo ac sagittis tempor.</p>
-                            <a href="#" class="card-link"><i class="fa fa-download"></i></a>
-                            <a href="#" class="card-link"><i class="fas fa-link"></i></a>
-                            <a href="#" class="card-link"><i class="fas fa-trash-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                }
+            }
+            <nav>
+                @Html.PagedListPager((IPagedList)ViewBag.elementosPagina, pagina => Url.Action("Buscador", new { pagina, ViewBag.busqueda }), new PagedListRenderOptions { 
+                    LinkToFirstPageFormat = "<<", 
+                    LinkToPreviousPageFormat = "<", 
+                    LinkToNextPageFormat = ">", 
+                    LinkToLastPageFormat = ">>", 
+                    UlElementClasses = new string[] {"pagination","justify-content-center"}, 
+                    LiElementClasses = new string[] { "page-item" }, 
+                    PageClasses = new string[] { "page-link" }})
+            </nav>
         </div>
     </div>
 </div>
+

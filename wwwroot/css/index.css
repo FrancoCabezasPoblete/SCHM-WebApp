@@ -2,11 +2,45 @@
     font-family: "Karla";
     text-transform: uppercase;
     color: #ffff; 
-}  
+    height: 40rem;
+} 
+
+
 
 .fondo{
-    background-image: url("../piano.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../orchestra.png) ;
+    background-size: cover ;
+    background-attachment: fixed ;
     background-position: center;
 }
+    
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+  
+.col:hover .overlay {
+    background: rgba(0, 0, 0, 0.582);
+    opacity: 1;
+
+}
+  
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+

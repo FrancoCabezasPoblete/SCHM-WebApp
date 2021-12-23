@@ -7,16 +7,17 @@
 <link rel="stylesheet" href="~/css/login.css">
 <link rel="stylesheet" href="~/css/globals.css">
 
-<div class="container text-center">
-    <section class="form-register">
-        <h4>Solicitud</h4>
-        <form asp-controller="Home" asp-action="InsertarSolicitud" method="post">
-        <input class="controls" type="text" asp-for="Nombre" name="Nombre" id="Nombre" placeholder="Nombre">
-        <input class="controls" type="text" asp-for="Apellido" name="Apellido" id="Apellido" placeholder="Apellido">
-        <input class="controls" type="email" asp-for="Correo" name="Correo" id="Correo" placeholder="Correo (Ej: nombre@gmail.cl)">
-        <textarea class="form-control" type="text" asp-for="Solicitud" name="Solicitud" id="Solicitud" placeholder="Solicitud (Ej: necesito saber el autor de la canción 'tiempo de vals' de 1990)"></textarea>
-        <button type="submit" class="btn btn-red py-2 px-4 my-2">Enviar</button> <br>
-        </form>
-        <a href="#">¿Aún no te llega respuesta?</a>
-    </section>
-</div>
+<body style="background-image: url(https://images.pexels.com/photos/1653090/pexels-photo-1653090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); background-attachment: fixed; background-size: cover">
+    <div class="container text-center">
+        <section class="form-register">
+            <h2 class="mb-3">Solicitud</h2>
+            <form asp-controller="Home" asp-action="InsertarSolicitud" method="post">
+            <input class="controls" type="text" asp-for="Nombre" name="Nombre" id="Nombre" placeholder="Nombre" required>
+            <input class="controls" type="text" asp-for="Apellido" name="Apellido" id="Apellido" placeholder="Apellido" required>
+            <input class="controls" type="email" asp-for="Correo" name="Correo" id="Correo" placeholder="Correo (Ej: nombre@gmail.cl)" required>
+            <textarea class="form-control" type="text" asp-for="Solicitud" name="Solicitud" id="Solicitud" placeholder="Solicitud (Ej: necesito saber el autor de la canción 'tiempo de vals' de 1990)" required></textarea>
+            <button type="submit" class="btn btn-red py-2 px-4 my-2">Enviar</button> <br>
+            </form>
+        </section>
+    </div>
+</body>

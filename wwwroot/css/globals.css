@@ -1,19 +1,60 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+}
+
+h1 {
+    color: white ;
+    font-size: 5rem ;
 }
 
 h2 {
-    color: #ffff;
+    color: #c0c0c0 ;
+    font-size: 3rem ;
+}
+
+.responsive-image {
+    width: 20rem;
+    height: 20rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    h1 {
+        font-size: 4rem !important;
+    }
+    p {
+        font-size: 1.1rem !important;
+    }
+    .responsive-image {
+        width: 13rem !important;
+        height: 13rem !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 3.5rem !important;
+    }
+    p {
+        font-size: 1rem !important;
+    }
+    .responsive-image {
+        width: 11rem !important;
+        height: 11rem !important;
+    }
 }
 
 .btn {
-    border-radius: 5px;
+    border-radius: 5px ;
 }
 
 .dropdown-menu {
-    min-width: auto !important;
+    min-width: auto !important ;
 }
 
 .flex-1 {
@@ -37,7 +78,7 @@ h2 {
 
 .scroll-text {
     position: relative;
-    height: 125px;
+    height: 100px;
     overflow: auto;
 } 
 
@@ -73,21 +114,21 @@ h2 {
 ------------------------*/
 
 .btn-red {
-    background-color: #e20059;
+    background-color: #EA3B28;
     color: white;
     border: #e20059;
 }
 
 .btn-red:hover {
     color: #fff;
-    background-color: #ff4a4a;
-    border-color: #ff4a4a;
+    background-color: #FF5D31;
+    border-color: #FF5D31;
 }
 
 .btn-red:focus {
     color: #fff;
-    background-color: #b4006e;
-    border-color: #b4006e;
+    background-color: #D12626;
+    border-color: #D12626;
     outline: 0;
     box-shadow: none;
 }
@@ -145,11 +186,18 @@ h2 {
     box-shadow: none;
 }
 
-/*
-.btn-grey.btn-outline-secondary:not(:disabled):not(.disabled).active, .btn-outline-secondary:not(:disabled):not(.disabled):active, .show > .btn-outline-secondary.dropdown-toggle {
-    color: white;
-    background-color: #c6c6c6 !important;
-    border-color: #f6f8f9 !important;
+a.navbar-brand:hover, .navbar a:hover, .card-link:hover {
+    color: #FF5D31 !important;
+    transition: .2s ease;
 }
-*/
+  
+.navbar .active, .card-link:active {
+    color: #D12626 !important;
+}
 
+.form-control:focus {
+    border: 1px solid #e6e9ec !important;
+    box-shadow: 0 0 0 0.2rem #f7f7f7 !important;
+    transition: .3s ease ;
+}
+  

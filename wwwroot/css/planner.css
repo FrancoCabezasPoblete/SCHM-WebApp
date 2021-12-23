@@ -1,3 +1,14 @@
+/* Banner
+----------------*/
+
+.top{
+    background-size:cover ;
+    background-attachment:fixed ;
+    background-position: center;
+    padding-top: 5rem ;
+    padding-bottom: 5rem ;
+  }
+
 /* Pagination
 ----------------*/
 
@@ -64,3 +75,39 @@
     border-right: none ;
     border-left: none ;
 }
+
+@media (max-width: 576px) {
+    .table-small {
+      margin: 0.001rem !important;
+  }
+    .small-date {
+        max-width: 4.3rem !important;
+    }
+    .small-name {
+        font-size: 0 !important;
+        max-width: 0rem !important;
+    }
+    .small-buttons {
+        max-width: 13rem !important;
+    }
+    .responsive-width {
+        max-width: 10rem !important;
+    }
+}
+
+/* Buscador de google 
+------------------------*/
+button.gsc-search-button {
+    padding: .375rem .75rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+svg {
+    scale: 1.4;
+}
+
+#gsc-iw-id1 {
+    border-radius: .25rem;
+}  

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "nd2V7nyT+WX+pEI/09xYrXRYt5vlgryycMJkMHqkFlrH51yDlelCSoVs1vTOdO7qW4Tg9au5iArVEdbXoIVu4Q==",
+  "dgSpecHash": "pKulo7rhU7zIYUPhXUf0Cwt19dKmjGfwXSx8K33ZNz9j++mIGsMNs+WwkStJm2KJFB78XV2k2hzOJiFOe4k+3Q==",
   "success": true,
   "projectFilePath": "/home/orig3n/Escritorio/inf236-2021-2-grupo-11-p-002/Web.csproj",
   "expectedPackageFiles": [
     "/home/orig3n/.nuget/packages/azure.core/1.6.0/azure.core.1.6.0.nupkg.sha512",
     "/home/orig3n/.nuget/packages/azure.identity/1.3.0/azure.identity.1.3.0.nupkg.sha512",
+    "/home/orig3n/.nuget/packages/bcrypt.net-next/4.0.2/bcrypt.net-next.4.0.2.nupkg.sha512",
     "/home/orig3n/.nuget/packages/dapper/2.0.123/dapper.2.0.123.nupkg.sha512",
     "/home/orig3n/.nuget/packages/dapper.contrib/2.0.78/dapper.contrib.2.0.78.nupkg.sha512",
     "/home/orig3n/.nuget/packages/jetbrains.annotations/2021.1.0/jetbrains.annotations.2021.1.0.nupkg.sha512",

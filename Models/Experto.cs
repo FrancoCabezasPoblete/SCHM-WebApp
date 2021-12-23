@@ -4,6 +4,7 @@ using System.Linq;
 using System.Data;
 using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
+using Dapper;
 
 
 namespace Web.Models{
@@ -31,17 +32,6 @@ namespace Web.Models{
         public string Correo { get; set; }
         public string Contraseña { get; set; }
 
-        public List<ExpertoModel> GetAll(){
-            IEnumerable<ExpertoModel> expertos;
-
-            using (IDbConnection db = new SqlConnection(_dbConnection))
-            {
-                expertos = db.GetAll<ExpertoModel>();
-            }
-
-            return expertos.ToList();
-        }
-
         public void GetById(int id){
             ExpertoModel experto = new ExpertoModel();
 
@@ -54,7 +44,17 @@ namespace Web.Models{
             Nombre = experto.Nombre;
             Apellido = experto.Apellido;
             Correo = experto.Correo;
-            Contraseña = experto.Contraseña;
+        }
+
+        public ExpertoModel GetByAccount(string correo, string contrasena){
+            ExpertoModel experto;
+            string sql = String.Format("SELECT * FROM Experto WHERE Correo = '{0}' AND Contraseña = '{1}'", correo, contrasena);
+            using (IDbConnection db = new SqlConnection(_dbConnection))
+            {
+                experto = db.Query<ExpertoModel>(sql).FirstOrDefault();
+            }
+
+            return experto;
         }
     }
 }

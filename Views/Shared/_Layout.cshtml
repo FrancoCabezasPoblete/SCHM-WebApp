@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - Web</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/globals.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet"> 
@@ -13,52 +14,45 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-top navbar-expand-sm navbar-toggleable-sm bg-white border-bottom box-shadow justify-content-between">
-            <div class="container-fluid">
+    <div class="container-fluid m-0 p-0">
+        <nav class="navbar navbar-expand-lg navbar-top navbar-light bg-white border-bottom box-shadow justify-content-between">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sociedad Chilena de Musicología</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class='nav-link @(ViewBag.Current == "Login" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Login">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class='nav-link @(ViewBag.Current == "Solicitudes" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Solicitudes">Solicitudes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class='nav-link @(ViewBag.Current == "Buscador" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Buscador">Buscador</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class='nav-link @(ViewBag.Current == "Solicitud" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Solicitud">Solicitud</a>
-                        </li>
-                    </ul>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        @if(@ViewBag.Cookie != null){
+                            <a class='nav-link nav-item  @(ViewBag.Current == "Solicitudes" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Solicitudes">Solicitudes</a>
+                            <a class='nav-link nav-item  @(ViewBag.Current == "Buscador" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Buscador">Buscador</a>
+                            <a class='nav-link nav-item ' asp-area="" asp-controller="Home" asp-action="LogOut">LogOut</a>
+                        } else {
+                            <a class='nav-link nav-item  @(ViewBag.Current == "Login" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Login">Login</a>
+                            <a class='nav-link nav-item  @(ViewBag.Current == "Solicitud" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Solicitud">Solicitud</a>
+                        }
+                    </div>
                 </div>
-            </div>
         </nav>
+    </div>
     </header>
-    <div class="container-fluid padding-top margin-foot">
-        <main role="main" class="pb-3">
+    <div class="container-fluid pb-5">
+        <main role="main" class="pb-5">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="footer text-muted pt-3">
+    <footer class="footer">
         <div class="container-fluid">
-            <div class = "row justify-content-between">
-                <div class="col-5 ml-3 d-flex align-items-start flex-column text-justify">
+            <div class = "row d-flex px-md-2 py-4 text-justify-between">
+                <div class="col ml-2 flex-column text-justify">
                     <h3>Nuestra institución</h3>
-                    La Sociedad Chilena de Musicología (SChM) es una corporación de derecho privado sin fines de lucro constituida el 14 de junio de 2001, 
-                    que convoca y agrupa a académicos e investigadores dedicados al estudio de la música en sus diversas manifestaciones...<a asp-controller="Home" asp-action="Index">[leer más]</a> 
+                    <a>La Sociedad Chilena de Musicología (SChM) es una corporación de derecho privado sin fines de lucro constituida el 14 de junio de 2001, que convoca y agrupa a académicos e investigadores dedicados al estudio de la música en sus diversas manifestaciones... <a asp-controller="Home" asp-action="Index">[leer más]</a></a> 
                 </div>
-                <div class="col-3 mr-3 d-flex align-items-end flex-column text-right">
+                <div class="col mr-2 flex-column text-right">
                     <h3>Contáctanos</h3>
-                    Correo: Musicologia123@gmail.com <br> Teléfono: +56 9 12345678
+                    <a>Correo: contacto@@schm.cl <br> Teléfono: +56 9 12345678</a>
                 </div>
             </div>
-        </div>
+        </div>  
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

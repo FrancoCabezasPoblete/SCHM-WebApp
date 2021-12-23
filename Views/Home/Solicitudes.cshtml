@@ -8,33 +8,33 @@
 <link rel="stylesheet" href="~/css/planner.css">
 <link rel="stylesheet" href="~/css/globals.css">
 
-<div class="row top">
-    <div class="col text-center">
-        <h2>Solicitudes</h2>
+<div class="row top" style="background-image: url(../piano.jpg)">
+    <div class="col text-center mt-5">
+        <h1>Solicitudes</h1>
     </div>
 </div>
 
 
 <div class="container-fluid mt-3">
-    <div class="row">
+    <div class="row d-flex d-row">
         <div class="col">
-            <nav class="navbar float-right px-0 my-2">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-grey my-sm-0 mr-sm-2" type="submit"><i class="fas fa-search"></i></button>
-                    <div class="dropdown my-sm-0">
-                        <button class="btn btn-grey dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <nav class="navbar justify-content-end px-0">
+                <form class="form-inline flex-1 p-0" asp-controller="Home" asp-action="Solicitudes" method="get">
+                    <input class="form-control responsive-font mr-1" name="busqueda" type="search" placeholder="Search" aria-label="Search" value="@ViewBag.busqueda" style="width:30%">
+                    <button class="btn btn-grey responsive-font mr-1" type="submit"><i class="fas fa-search"></i></button>
+                    <div class="dropdown">
+                        <button class="btn btn-grey dropdown-toggle responsive-font" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-filter"></i> Filtro
                         </button>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Fecha ascendiente</a>
-                            <a class="dropdown-item" href="#">Fecha descendiente</a>
-                            <a class="dropdown-item" href="#">Nombre ascendiente</a>
-                            <a class="dropdown-item" href="#">Nombre descendiente</a>
-                            <a class="dropdown-item" href="#">No leído</a>
-                            <a class="dropdown-item" href="#">En proceso</a>
-                            <a class="dropdown-item" href="#">No encontrado</a>
-                            <a class="dropdown-item" href="#">Completado</a>
+                        <div class="dropdown-menu dropdown-menu-right responsive-font" aria-labelledby="dropdownMenuButton">
+                            <a asp-controller="Home" asp-action="Solicitudes" asp-route-pagina="1" asp-route-filtro="1" asp-route-busqueda="@ViewBag.busqueda" class="dropdown-item" type="submit" >Fecha ascendiente</a>
+                            <a asp-controller="Home" asp-action="Solicitudes" asp-route-pagina="1" asp-route-filtro="0" asp-route-busqueda="@ViewBag.busqueda" class="dropdown-item" type="submit" >Fecha descendiente</a>
+                            <a asp-controller="Home" asp-action="Solicitudes" asp-route-pagina="1" asp-route-filtro="2" asp-route-busqueda="@ViewBag.busqueda" class="dropdown-item" type="submit" >Nombre ascendiente</a>
+                            <a asp-controller="Home" asp-action="Solicitudes" asp-route-pagina="1" asp-route-filtro="3" asp-route-busqueda="@ViewBag.busqueda" class="dropdown-item" type="submit" >Nombre descendiente</a>
+                            <a asp-controller="Home" asp-action="Solicitudes" asp-route-pagina="1" asp-route-filtro="4" asp-route-busqueda="@ViewBag.busqueda" class="dropdown-item" type="submit" >No leído</a>
+                            <a asp-controller="Home" asp-action="Solicitudes" asp-route-pagina="1" asp-route-filtro="5" asp-route-busqueda="@ViewBag.busqueda" class="dropdown-item" type="submit" >En proceso</a>
+                            <a asp-controller="Home" asp-action="Solicitudes" asp-route-pagina="1" asp-route-filtro="6" asp-route-busqueda="@ViewBag.busqueda" class="dropdown-item" type="submit" >No encontrado</a>
+                            <a asp-controller="Home" asp-action="Solicitudes" asp-route-pagina="1" asp-route-filtro="7" asp-route-busqueda="@ViewBag.busqueda" class="dropdown-item" type="submit" >Completado</a>
                         </div>
                     </div>
                 </form>
@@ -42,46 +42,24 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <table class="table table-bordered">
+        <div class="col table-small-col">
+            <table class="table table-bordered text-left" style="table-layout:fixed">
                 <tbody>
+                    @foreach (var item in Model){
                     <tr>
-                        <td for="date" class="text-muted" style="width: 5rem">05/12/2021</td>
-                        <td for="name" style="width: 50rem">Robert Demiro</td>
-                        <td for="text" class="text-truncate" style="width:">Derechos de autor de canción clasica chilena. "El costillar es mio" </td>
-                        <td style="width: 13rem" ><a asp-area="" asp-controller="Home" asp-action="LeerMas" class="btn btn-grey">Leer más</a>
-                        <button type="submit" class="btn btn-grey">Borrar</button></td>
-                        <td style="width: 1rem"><div class="btn-group dropright ">
-                            <button type="button" class="btn btn-green">
-                                <i class="@estados[1]"></i>
-                            </button>
-                            <button type="button" class="btn btn-green dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="sr-only">Toggle Dropright</span>
-                            </button>
-                            <div class= "dropdown-menu text-center">
-                                <button class="dropdown-item" type="button"><i class="fas fa-sync-alt"></i></button>
-                                <button class="dropdown-item" type="button"><i class="fas fa-times"></i></button>
-                                <button class="dropdown-item" type="button"><i class="fas fa-ellipsis-h"></i></button>
-                            </div>
-                        </div></td>
-                    </tr>
-                    
-                    @foreach (var item in ViewBag.elementosPagina){
-                    <tr>
-                        <td for="date">@(item.Fecha.Length < 19 ? item.Fecha.Substring(0,9) : item.Fecha.Substring(0,10))</td>
-                        <td for="name">@item.Nombre @item.Apellido</td>
-                        <td for="text" class="text-truncate" style="max-width: 180px;">@(String.IsNullOrEmpty(item.Solicitud)?"-":item.Solicitud)</td>
-                        <td><a asp-controller="Home" asp-action="LeerMas" asp-route-id="@item.IDFormulario" class="btn btn-grey">Leer más</a>
-                        <button type="button" onclick="location.href='@Url.Action("EliminarSolicitud","Home",new {id = item.IDFormulario})'" class="btn btn-grey">Borrar</button>
-                        </td>
-                        <td><div class="btn-group dropright">
-                            <button type="button" class="btn @botones[item.Estado]">
+                        <td for="date" style="width:6rem" class="text-muted table-small responsive-font small-date p-1">@(item.Fecha.Length < 19 ? item.Fecha.Substring(0,9) : item.Fecha.Substring(0,10))</td>
+                        <td for="name" class="text-truncate table-small responsive-font small-name p-1" style="width:12rem">@item.Nombre @item.Apellido</td>
+                        <td for="text" class="text-truncate table-small responsive-font p-1">@(String.IsNullOrEmpty(item.Solicitud)?"-":item.Solicitud)</td>
+                        <td style="width:11.4rem" class="small-buttons p-1 responsive-width"><a type="button" onclick='changeModal("@item.Nombre","@item.Apellido","@(item.Fecha.Length < 19 ? item.Fecha.Substring(0,9) : item.Fecha.Substring(0,10))","@item.Correo",`@item.Solicitud`)' class="btn btn-grey mr-2 table-small responsive-font" data-toggle="modal" data-target="#modalLeerMas" ><i class="fas fa-eye"></i></a>
+                        <button type="button" onclick="location.href='@Url.Action("EliminarSolicitud","Home",new {id = item.IDFormulario})'" class="btn btn-grey mr-2 table-small responsive-font "><i class="fas fa-trash"></i></button>
+                        <div class="btn-group">
+                            <button type="button" class="btn @botones[item.Estado] table-small responsive-font" style="width: 2.3rem">
                                 <i class="@estados[item.Estado]"></i>
                             </button>
-                            <button type="button" class="btn @botones[item.Estado] dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button type="button table-small responsive-font" class="btn @botones[item.Estado] dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 1.6rem">
                                 <span class="sr-only">Toggle Dropright</span>
                             </button>
-                            <div class="dropdown-menu text-center">
+                            <div class="table-small responsive-font  dropdown-menu text-center dropdown-menu-right">
                                 <button onclick="location.href='@Url.Action("EditarEstado","Home",new {id = item.IDFormulario, estado = 1})'" class="dropdown-item" type="submit"><i class="fas fa-check"></i></button>
                                 <button onclick="location.href='@Url.Action("EditarEstado","Home",new {id = item.IDFormulario, estado = 2})'" class="dropdown-item" type="submit"><i class="fas fa-sync-alt"></i></button>
                                 <button onclick="location.href='@Url.Action("EditarEstado","Home",new {id = item.IDFormulario, estado = 3})'" class="dropdown-item" type="submit"><i class="fas fa-times"></i></button>
@@ -92,12 +70,46 @@
                     }
                 </tbody>
             </table>
+            <div class="modal fade" id="modalLeerMas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Solicitud</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container my-5">
+                                <div class="d-flex row justify-content-center">
+                                    <div class="col-10">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="font-weight-bold" id="NombreModal"></td>
+                                                    <td class="text-muted text-right" id="FechaModal"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-muted" colspan="2" id="CorreoModal"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" id="SolicitudModal"></td>
+                                                </tr>      
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <nav>
-                    @Html.PagedListPager((IPagedList)ViewBag.elementosPagina, pagina => Url.Action("Solicitudes", new { pagina }), new PagedListRenderOptions { 
-                        LinkToFirstPageFormat = "<< Primera", 
-                        LinkToPreviousPageFormat = "< Anterior", 
-                        LinkToNextPageFormat = "Siguiente >", 
-                        LinkToLastPageFormat = "&Uacute;ltima >>", 
+                    @Html.PagedListPager(Model, pagina => Url.Action("Solicitudes", new { pagina, ViewBag.filtro, ViewBag.busqueda }), new PagedListRenderOptions { 
+                        LinkToFirstPageFormat = "<<", 
+                        LinkToPreviousPageFormat = "<", 
+                        LinkToNextPageFormat = ">", 
+                        LinkToLastPageFormat = ">>", 
                         UlElementClasses = new string[] {"pagination","justify-content-center"}, 
                         LiElementClasses = new string[] { "page-item" }, 
                         PageClasses = new string[] { "page-link" }})
@@ -105,3 +117,11 @@
         </div>
     </div>
 </div>
+<script>
+function changeModal(nombre, apellido, fecha, correo, solicitud){
+    document.getElementById("NombreModal").innerHTML = nombre+" "+apellido;
+    document.getElementById("FechaModal").innerHTML = fecha;
+    document.getElementById("CorreoModal").innerHTML = correo;
+    document.getElementById("SolicitudModal").innerHTML = solicitud;
+}
+</script>

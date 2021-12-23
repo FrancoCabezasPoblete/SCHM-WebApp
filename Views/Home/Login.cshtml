@@ -1,15 +1,52 @@
 @{
     ViewData["Title"] = "Login";
 }
+@model ExpertoModel
 <link rel="stylesheet" href="~/css/login.css">
 <link rel="stylesheet" href="~/css/globals.css">
 
-<div class="container text-center">
-    <section class="form-register">
-        <h4>Login</h4>
-        <input class="controls" type="email" name="correo" id="correo" placeholder="Correo (Ej: nombre@gmail.cl)">
-        <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-        <button class="btn btn-red py-2 px-4 my-2" type="button">Iniciar Sesión</button>
-        <p><a href="#">¿Olvidaste tu contraseña?</a></p>
-    </section>
-</div>
+<body style="background-image: url(https://images.pexels.com/photos/417451/pexels-photo-417451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); background-attachment: fixed; background-size: cover"> 
+    <div class="container text-center mt-5">
+        <form asp-controller="Home" asp-action="Login" method="post" class="form-register">
+            <h2 class="mb-3">Login</h2>
+            <input asp-for="Correo" class="controls" type="email" name="correo" id="correo" placeholder="Correo (Ej: nombre@gmail.cl)" required>
+            <input asp-for="Contraseña" class="controls" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
+            <button class="btn btn-red py-2 px-4 my-2" type="submit">Iniciar Sesión</button>
+            <p>
+            <a href="" data-toggle="modal" data-target="#modalExpediente">¿Olvidaste tu contraseña?</a>
+            </p>
+        </form>
+    </div>
+    <!-- Modal -->
+            <div class="modal fade" id="modalExpediente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Cambiar Contraseña</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                        <form asp-controller="Home" asp-action="CambiarContrasena" method="post">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <input class="form-control form-control-lg my-2" asp-for="Correo" type="text" placeholder="Correo" required>
+                                    <div class="input-group my-2">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPrepend2">ID</span>
+                                        </div>
+                                        <input type="text" asp-for="IDExperto" class="form-control" id="validationDefaultUsername" placeholder="IDExperto" aria-describedby="inputGroupPrepend2" required>
+                                    </div>
+                                    <input class="form-control form-control-lg my-2" asp-for="Contraseña" type="password" placeholder="Nueva Contraseña" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-red">Save changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    @if(ViewBag.Error != null){
+        <script>alert("@ViewBag.Error");</script>
+    }
+</body>
