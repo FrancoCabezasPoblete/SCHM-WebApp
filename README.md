@@ -16,7 +16,7 @@ Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.labcomp.cl
 * [Video presentación cliente](https://youtu.be/xEYDTg0q1Ao)
 * [Video presentación avance 1](https://drive.google.com/file/d/1TgpT9KZK0LEM13Am4jzxLIDdpv983Rkg/view?usp=sharing)
 * [Video presentación avance 3](https://youtu.be/6jFGHFcWH8g)
-* Video presentación final (*Pendiente*)
+* Video presentación final (https://drive.google.com/file/d/11nZdjhj8FbFDMdNGKyf7tcAOS66rn8JG/view?usp=sharing)
 
 ## Aspectos técnicos relevantes
 
