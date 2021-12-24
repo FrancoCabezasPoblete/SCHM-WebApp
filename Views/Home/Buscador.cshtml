@@ -58,9 +58,9 @@
                                     </div>
                                     <input class="form-control my-2" asp-for="Descripcion" type="text" placeholder="Descripción">
                                     <input class="form-control form-control-sm my-2" asp-for="Fuente" type="Link" placeholder="Enlace" required>
-                                    <small id="fileHelp" class="form-text text-muted mt-4">Solo archivos pdf</small>
                                     <input type="file" asp-for="ArchivoForm" class="form-control-file" id="exampleFormControlFile1">
                                 </div>
+                                    <small id="fileHelp" class="form-text text-muted mt-4">Solo archivos pdf, con tamaño menor a 10MB</small>
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-red">Save changes</button>

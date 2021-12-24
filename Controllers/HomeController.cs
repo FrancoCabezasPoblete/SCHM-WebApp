@@ -189,10 +189,10 @@ namespace Web.Controllers{
         public IActionResult InsertarExpediente(ExpedienteModelForm newExpediente){
             if(newExpediente.ArchivoForm != null){
                 using (var memoryStream = new MemoryStream()){
-                    newExpediente.ArchivoForm.CopyToAsync(memoryStream);
+                    newExpediente.ArchivoForm.CopyTo(memoryStream);
 
-                    // Upload the file if less than 2 MB
-                    if (memoryStream.Length < 2097152){
+                    // Upload the file if less than 10 MB
+                    if (memoryStream.Length < (2097152*5)){
                         var file = new ExpedienteModel(){
                             Fecha = newExpediente.Fecha, 
                             Titulo = newExpediente.Titulo,
