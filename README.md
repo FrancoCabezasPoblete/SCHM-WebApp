@@ -1,3 +1,4 @@
+# *Wiki no funcional en versión de GitHub*
 # Grupo 11
 
 Este es el repositorio del *Grupo 11*, cuyos integrantes son:
